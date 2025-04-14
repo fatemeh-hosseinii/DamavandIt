@@ -1,0 +1,19 @@
+@config "./tailwind.config.js";
+@import "tailwindcss";
+
+body {
+  direction: rtl;
+}
+
+* {
+  font-family: iranyekan;
+}
+
+@font-face {
+  font-family: iranyekan;
+  src: url(./assets/Fonts/Qs_Iranyekan.ttf);
+}
+
+::placeholder {
+  font-size: 13px !important;
+}

@@ -1,0 +1,98 @@
+{
+    "Navbar":[
+        {
+            "id":1,
+            "name":"صفحه ی نخست",
+            "path":"/"
+        },
+        {
+            "id":2,
+            "name":"وبلاگ",
+            "path":"/veblog"
+        },
+        {
+            "id":3,
+            "name":"پروژه ها",
+            "path":"/project"
+        },
+        {
+            "id":4,
+            "name":"سوالات متداول",
+            "path":"/ques"
+        },
+        {
+            "id":5,
+            "name":"تماس با ما",
+            "path":"/contact"
+        },
+        {
+            "id":6,
+            "name":"درباره ما",
+            "path":"/about"
+
+        }
+    ],
+    "Services":[
+        {
+            "id":1,
+            "name":"تضمین بازگشت وجه",
+            "icon": "return",
+            "title":"در تمامی پروژه‌ها، اگر پس از فاز اول پیاده‌سازی ناراضی باشید، مبلغ پرداختی شما بازگردانده خواهد شد."
+        },
+        {
+            "id":2,
+            "name":"طراحی اختصاصی",
+            "icon":"design",
+            "title":"طراحی مختص کسب‌وکار شما و متناسب با سلیقه شما به صورت اختصاصی انجام می‌شود."
+
+        },
+        {
+            "id":3,
+            "name":"زیرساخت قابل گسترش",
+            "icon":"code",
+            "title":"زیرساخت سئو اعم از رعایت‌ تگ‌های متا و هدینگ، سرعت و... در پروژه‌های تحت وب کاملا رعایت‌ می‌شود."
+
+        },
+        {
+            "id":4,
+            "name":"کدنویسی SEO Oriented",
+            "icon":"seo",
+            "title":"زیرساخت سئو اعم از رعایت‌ تگ‌های متا و هدینگ، سرعت و... در پروژه‌های تحت وب کاملا رعایت‌ می‌شود."
+        }
+    ],
+    "SuccessProject":[
+        {
+            "id":1,
+            "image":"https://rayanita.com/assets/img/main/samples/ffeng.jpg",
+            "title":"طراحی سایت فروشگاهی"
+        },
+        {
+            "id":2,
+            "image":"https://rayanita.com/assets/img/main/samples/pars-express-app.png",
+            "title":"طراحی سایت فروشگاهی"
+        },
+        {
+            "id":3,
+            "image":"https://rayanita.com/assets/img/main/samples/irankhebre-s.jpg",
+            "title":"طراحی سایت فروشگاهی"
+        },
+        {
+            "id":4,
+            "image":"https://rayanita.com/assets/img/main/samples/injazanoonas.jpg",
+            "title":"طراحی سایت فروشگاهی"
+        },
+        {
+            "id":5,
+            "image":"https://rayanita.com/assets/img/main/samples/Ilan-language.png",
+            "title":"طراحی سایت فروشگاهی"
+        },
+        {
+            "id":6,
+            "image":"https://rayanita.com/assets/img/main/samples/irankhebre-s.jpg",
+            "title":"طراحی سایت فروشگاهی"
+        }
+
+
+    ]
+   
+}
