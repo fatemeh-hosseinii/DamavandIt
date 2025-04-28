@@ -1,7 +1,6 @@
 import { AiOutlineLeft } from "react-icons/ai";
 import SectionOne from "../../components/AboutComponents/SectionOne";
-import SectionTwo from "../../components/AboutComponents/SectionTwo";
-import SectionThree from "../../components/AboutComponents/SectionThree";
+import SectionTwo from "../../components/HomeComponents/SectionTwo";
 
 const About = () => {
     return ( <>
@@ -20,7 +19,6 @@ const About = () => {
         </div>
         <SectionOne/>
         <SectionTwo/>
-        <SectionThree/>
     </div>
     </> );
 }
