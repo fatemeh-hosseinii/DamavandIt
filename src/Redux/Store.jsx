@@ -3,11 +3,13 @@ import NabarSlice from "./NavbarSlice"
 import ServicesSlice from "./ServicesSlice"
 import SuccessProjectSlice from "./SuccesProjectSlice"
 import TeaamSlice from "./TeamSlice"
+import ArticleNewsSlice from "./ArticleNewsSlice"
 export const store = configureStore({
   reducer: {
     Navbar:NabarSlice,
     Service:ServicesSlice,
     Project:SuccessProjectSlice,
-    Team:TeaamSlice
+    Team:TeaamSlice,
+    Article:ArticleNewsSlice
   },
 })
