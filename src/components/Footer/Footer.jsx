@@ -1,14 +1,5 @@
 import logo from "../../../public/assets/media/icon (2).png";
-import { CiLocationOn } from "react-icons/ci";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import imgfooter from "../../../public/assets/media/nsr.png";
-import imgfooter1 from "../../../public/assets/media/fnvrd.png";
-import { BsEnvelope } from "react-icons/bs";
-import { BsClock } from "react-icons/bs";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillFacebook } from "react-icons/ai";
+
 const Footer = () => {
     return ( <>
     <div className="lg:flex  flex-col hidden">

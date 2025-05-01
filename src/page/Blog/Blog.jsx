@@ -1,54 +1,45 @@
-import { useDispatch, useSelector } from "react-redux";
-import ArticleNews from "../../components/BlogComponents/ArticleNews";
-import { fetchArticle } from "../../Redux/ArticleNewsSlice";
-import JobArticle from "../../components/BlogComponents/JobArticle";
-import { useEffect } from "react";
+import SectionFour from "../../components/BlogComponents/SectionFour";
+import SectionOne from "../../components/BlogComponents/SectionOne";
+import SectionThree from "../../components/BlogComponents/SectionThree";
+import SectionTwo from "../../components/BlogComponents/SectionTwo";
 
 const Blog = () => {
- 
-  const{Article,loading,error}=useSelector((state)=>state.Article)
-  const dispatch=useDispatch()
-  useEffect(()=>{
-      dispatch(fetchArticle())
-  },[])
-
   return (
-    <div className="w-full flex flex-col p-6 bg-[#fafafa]  shadow-sm">
-      {/* هدر وبلاگ */}
-      <div className="mb-8">
-        <p className="text-[18px] text-[#777]">وبلاگ</p>
-        <h1 className="text-[32px] font-extrabold text-[#222] mt-2">
-          با <span className="text-[#faa518]">دماوند ایتی</span> به‌روز بمانید
+    <div className="w-full bg-[#f9f9f9] py-12 px-6 md:px-16">
+      {/* هدر صفحه */}
+      <div className="text-center mb-12">
+        <h1 className="text-3xl md:text-3xl font-extrabold text-gray-800">
+          تازه‌ترین اخبار و مقالات
         </h1>
-        <p className="text-[20px] text-[#444] mt-4 leading-relaxed">
-          جدیدترین اخبار، پروژه‌ها، بهبودهای خدمات، و نکات حرفه‌ای در زمینه طراحی و توسعه سایت را در اینجا دنبال کنید.
+        <p className="text-gray-600 mt-4 text-sm max-w-3xl mx-auto">
+          با خواندن مطالب تخصصی ما در حوزه تکنولوژی، طراحی وب و توسعه نرم‌افزار، دانش خود را به‌روز نگه دارید.
         </p>
       </div>
-      {/* بخش مقالات کسب و کار */}
-      <div className="bg-white w-full p-6 ">
-        <h2 className="text-[24px] font-bold text-[#b45b00] mb-6 border-b pb-3">
-          مقالات کسب و کار
-        </h2>
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {Article.JobArticle?.map((article) => (
-            <JobArticle key={article.id} article={article} />
-          ))}
-        </div>
+      <div className=" flex flex-row">
+         <div className="w-[50%] ">
+            <SectionOne/>
+         </div>
+         <div className="w-[50%]">
+            <SectionTwo/>
+         </div>
       </div>
-      {/* بخش مقالات */}
-      <div className="bg-white w-full p-6 ">
-        <h2 className="text-[24px] font-bold text-[#222] mb-6 border-b pb-3">
-          اخبار و مقالات
-        </h2>
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {Article.ArticleNews?.map((post) => (
-          <ArticleNews post={post}/>
-          ))}
+      <div className="mt-5 flex flex-col">
+        <h1 className="text-3xl md:text-2xl font-extrabold text-gray-800 border-b pb-2 border-[#727272]">
+           اخبار و مقالات
+        </h1>
+       <div className=" w-[100%] flex flex-row mt-5">
+        <div className="w-[70%] ">
+            <SectionThree/>
+            
         </div>
+        <div className=" w-[30%]">
+          <SectionFour/>
+            
+        </div>
+       </div>
       </div>
-
-
     </div>
+    
   );
 };
 

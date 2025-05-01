@@ -7,6 +7,7 @@ import RouterAbout from "../page/about/RouterAbout/RouterAbout";
 import RouterContactUs from "../page/ContactUs/RouterContactUs/RouterContactUs";
 import RouterBlog from "../page/Blog/RouterBlog/RouterBlog";
 import RouterProject from "../page/Projects/RouterProject/RouterProject";
+import RouterQuestion from "../page/Question/RouterQuestion/RouterQuestion";
 const App = () => {
     return ( <>
      <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/contact/*" element={<RouterContactUs/>}/>
             <Route path="/blog/*" element={<RouterBlog/>} />
             <Route path="/project/*" element={<RouterProject/>} />
+            <Route path="/ques/*" element={<RouterQuestion/>} />
         </Routes>
         <Footer/>
     </BrowserRouter>
