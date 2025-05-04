@@ -21,7 +21,7 @@ const SectionOne = () => {
                     <p className="text-[#58595B] font-bold">{elem.name}</p>
                     <p className="text-[#9084A8] text-[12px]">{elem.date}</p>
                     <p className="">{elem.decription}</p>
-                    <Link className="w-[20%] px-3 py-1 bg-[#E89A18] text-center font-bold text-[white]">بیشتر</Link>
+                    <Link  className="w-[20%] px-3 py-1 bg-[#E89A18] text-center font-bold text-[white]" to={`/blog/${elem.id}`} >بیشتر</Link>
                     
                 </div>
             })

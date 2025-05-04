@@ -22,7 +22,7 @@ const SectionThree = () => {
                         <p className="text-[#58595B] font-bold">{elem.name}</p>
                         <p className="text-[#9084A8] text-[12px]">{elem.date}</p>
                         <p className="line-clamp-3">{elem.decription}</p>
-                        <Link className="w-[25%] px-3 py-1 bg-[#E89A18] text-center text-[13px] font-bold text-[white]">بیشتر</Link>
+                        <Link to={`/blog/${elem.id}`} className="w-[25%] px-3 py-1 bg-[#E89A18] text-center text-[13px] font-bold text-[white]">بیشتر</Link>
 
                     </div>
                     

@@ -17,7 +17,7 @@ const SectionTwo = () => {
                         <div className=" flex flex-col gap-5">
                             <p className="line-clamp-2 text-[15px] text-[#58595B] font-bold">{elem.name}</p>
                             <p className="text-[13px] text-[#9084A8] ">{elem.date}</p>
-                            <Link className="w-[30%] px-3 py-1 bg-[#E89A18] text-center text-[12px] font-bold text-[white]">بیشتر</Link>
+                            <Link to={`/blog/${elem.id}`} className="w-[30%] px-3 py-1 bg-[#E89A18] text-center text-[12px] font-bold text-[white]">بیشتر</Link>
 
                         </div>
                     </div>

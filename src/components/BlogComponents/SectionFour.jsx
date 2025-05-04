@@ -19,7 +19,7 @@ const SectionFour = () => {
                         <p className="text-[#58595B] font-bold" >{elem.name}</p>
                         
                     </div>
-                    <Link className="w-[35%] px-5 py-1 bg-[#E89A18] text-center text-[15px] font-bold text-[white]">بیشتر</Link>
+                    <Link to={`/blog/${elem.id}`} className="w-[35%] px-5 py-1 bg-[#E89A18] text-center text-[15px] font-bold text-[white]">بیشتر</Link>
 
                     
                 </div>

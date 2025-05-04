@@ -16,10 +16,11 @@ const ArticleNewsSlice = createSlice({
     
     extraReducers: (builder) => {
         builder
-            .addCase(fetchArticle.fulfilled, (state, action) => {
-                state.Article = action.payload; 
-                state.loading = false; 
-            })
+        .addCase(fetchArticle.fulfilled, (state, action) => {
+            state.Article = action.payload; 
+            state.loading = false;
+        })
+        
             .addCase(fetchArticle.pending, (state) => {
                 state.loading = true;
             })
