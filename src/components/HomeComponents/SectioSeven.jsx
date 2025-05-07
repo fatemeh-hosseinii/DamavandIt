@@ -1,132 +1,155 @@
-import { useEffect, useState } from "react";
-
-const SectionSeven = () => {
+import React from "react";
+import { motion } from "framer-motion";
+import {
+    FaClipboardList,
+    FaCode,
+    FaBug,
+    FaHandshake,
+  } from "react-icons/fa6";
+  import { FaSearch } from "react-icons/fa"; // ایمپورت جدا برای FaSearch
   
 
-    return ( <>
-    <div className=" mt-20 xl:flex hidden flex-col justify-center items-center  p-3">
-        <h2 className="text-[30px] font-bold"> مراحل <span className="text-[#ff9d01]">صفر تا صد</span> پروژه ها</h2>
-        <div className="w-[100%] flex flex-row justify-center relative  container">
-            <div className=" absolute right-6  w-[47%]  flex flex-col justify-end items-end mt-25 gap-5 ">
-                <div className="bg-gradient-to-r from-[#1890fa] to-[#0D67BE] p-3 w-[70%] rounded-2xl text-[white] mt-15">
-                    <div className="flex flex-col">
-                       <h2 className="font-bold text-[#FAA518] text-[18px]">بررسی فنی</h2>
-                       <p className="text-[12px] leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
+// مراحل اجرای پروژه + آیکون‌ها
+const steps = [
+  {
+    title: "تحلیل و طراحی سیستم",
+    description: "در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد...",
+    icon: <FaClipboardList className="text-3xl text-[#FAA518]" />,
+  },
+  {
+    title: "بررسی فنی",
+    description: "در این مرحله ساختار فنی پروژه، تکنولوژی‌ها و نحوه پیاده‌سازی بررسی می‌شود...",
+    icon: <FaSearch className="text-3xl text-[#FAA518]" />,
+  },
+  {
+    title: "برنامه نویسی و اجرا",
+    description: "پس از مشخص شدن ساختارها، مطابق فازبندی اجرا و برنامه نویسی آغاز می‌شود...",
+    icon: <FaCode className="text-3xl text-[#ffc66a]" />,
+  },
+  {
+    title: "تست و دیباگ",
+    description: "در پایان هر فاز و در انتها، تست و رفع باگ انجام می‌شود...",
+    icon: <FaBug className="text-3xl text-[#ffbc51]" />,
+  },
+  {
+    title: "پشتیبانی یکساله",
+    description: "پس از تحویل نهایی، یکسال پشتیبانی رایگان خواهید داشت...",
+    icon: <FaHandshake className="text-3xl text-[#ffc05c]" />,
+  },
+];
 
-                </div>
-                <div className="bg-gradient-to-r from-[#1890fa] to-[#0D67BE] p-3 w-[70%] text-[white] rounded-2xl mt-25">
-                    <div className="flex flex-col">
-                       <h2 className="font-bold text-[#FAA518] text-[17px]">برنامه نویسی و اجرا</h2>
-                       <p className="text-[12px] leading-5">
-                       پس از مشخص شدن ساختارها، مطابق فازبندی اجرا و برنامه نویسی آغاز می‌گردد. بخش‌های مختلف در صورت امکان برای سرعت بیشتر به صورت همزمان توسعه داده می‌شوند.
-
-
-                       
-                       </p>
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div className="absolute left-6  flex flex-col gap-3 w-[47%] ">
-                <div className="bg-gradient-to-r from-[#1890fa] to-[#0D67BE] p-3 w-[70%] text-[white] rounded-2xl mt-15">
-                    <div className="flex flex-col">
-                       <h2 className="font-bold text-[#FAA518] text-[19px]"> تحلیل و طراحی سیستم</h2>
-                       <p className="text-[12px] leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
-
-                </div>
-                <div className="bg-gradient-to-r from-[#1890fa] to-[#0D67BE]  p-5 w-[70%] text-[white] rounded-2xl mt-25">
-                    <div className="flex flex-col">
-                       <h2 className="font-bold text-[#FAA518] text-[19px]"> تست و دیباگ</h2>
-                       <p className="text-[12px] leading-5">
-                        
-                       علاوه بر تست و دیباگ در هر فاز تحویلی، در آخر کار نیز یک محدوده زمانی صرفا به تست و رفع مشکل پرداخته می‌شود.
-
-
-                       </p>
-                    </div>
-
-                </div>
-                <div className="bg-gradient-to-r from-[#1890fa] to-[#0D67BE] p-3 w-[70%] text-[white] rounded-2xl mt-25 bg">
-                    <div className="flex flex-col">
-                       <h2 className="font-bold text-[#FAA518] text-[19px]"> پشتیبانی یکساله</h2>
-                       <p className="text-[12px] leading-5">
-                        
-                       پس از تحویل نهایی، یکسال پشتیبانی رایگان خواهید داشت و در طول این مدت همه موارد فنی با اولویت بالا بررسی و مرتفع می‌گردند.
-
-
-                       </p>
-                    </div>
-
-                </div>
-
-
-            </div>
-           <div className="relative h-[750px] w-[3px] bg-gradient-to-r from-[#1890fa] to-[#0D67BE] mt-5 before:absolute before:content-[''] before:w-4 before:h-4 before:bg-[blue] before:rounded-full before:-left-[6px] before:top-0 after:absolute after:content-[''] after:w-4 after:h-4 after:bg-[blue] after:rounded-full after:-left-[6px] after:bottom-0">
-           </div>
-
-        </div>
-        
+// کارت مرحله
+const StepCard = ({ title, description, icon, className = "" }) => (
+  <div
+    className={`text-right bg-[#FFDF80] p-6 rounded-2xl text-white w-full max-w-md shadow-xl ${className}`}
+  >
+    <div className="flex items-center gap-3 mb-3">
+      <div className="bg-white rounded-full p-2 shadow">
+        {icon}
+      </div>
+      <h3 className="font-bold text-[#FAA518] text-lg">{title}</h3>
     </div>
-    {/* responsive */}
-    <div className=" flex w-[100%] xl:hidden flex-col justify-center items-center mt-20 ">
-        <h2 className="text-[25px] font-bold"> مراحل <span className="text-[#FAA518]">صفر تا صد</span> واردات کالا </h2>
-        <div className="flex flex-col justify-center gap-3 items-center  w-[70%] mx-auto mt-6">
-                <div className="bg-[#FAA518] p-3 w-[95%] text-[white] ">
-                    <div className="flex flex-col">
-                       <h2 className="text-[bold]  text-[16px]"> تحلیل و طراحی سیستم</h2>
-                       <p className="text-[11px]  leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
+    <p className="text-sm leading-6">{description}</p>
+  </div>
+);
 
-                </div>
-                <div className="bg-[#FAA518] p-3 w-[95%] text-[white] ">
-                    <div className="flex flex-col">
-                       <h2 className="text-[bold]  text-[16px]"> تحلیل و طراحی سیستم</h2>
-                       <p className="text-[11px]  leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
+// کامپوننت اصلی
+const SectionSeven = () => {
+  return (
+    <section className="w-full bg-white py-16">
+      {/* عنوان اصلی */}
+      <div className="text-center px-4 mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          مراحل <span className="text-[#FAA518]">صفر تا صد</span> پروژه‌ها
+        </h2>
+      </div>
 
-                </div>
-                <div className="bg-[#FAA518] p-3 w-[95%] text-[white] ">
-                    <div className="flex flex-col">
-                       <h2 className="text-[bold]  text-[16px]"> تحلیل و طراحی سیستم</h2>
-                       <p className="text-[11px]  leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
+      {/* دسکتاپ */}
+      <div className="hidden xl:block relative container mx-auto px-6">
+        {/* خط مرکزی */}
+        <div className="absolute top-0 left-1/2 w-[4px] h-full bg-gradient-to-b from-[#00B4DB] via-[#1890fa] to-[#0D67BE] rounded-full z-0" />
 
-                </div>
-                <div className="bg-[#FAA518] p-3 w-[95%] text-[white] ">
-                    <div className="flex flex-col">
-                       <h2 className="text-[bold]  text-[16px]"> تحلیل و طراحی سیستم</h2>
-                       <p className="text-[11px]  leading-5">
-                        
-                       در ابتدای کار لازم است پروژه از نظر فنی کاملا مورد بررسی قرار گیرد. پس از بررسی ابهامات، بهبودها و پیشنهادات مشخص می‌شوند. در صورت نیاز یک جلسه رفع ابهام و شفاف سازی تشکیل می‌شود.
-                       </p>
-                    </div>
+        <div className="relative z-10 flex flex-col gap-5">
+          {steps.map((step, index) => {
+            const isLeft = index % 2 === 0;
 
-                </div>
+            return (
+              <div key={index} className="relative flex justify-between items-center">
+                {/* کارت سمت چپ یا راست */}
+                {isLeft ? (
+                  <>
+                    <motion.div
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.2 }}
+                      viewport={{ once: false }}
+                      className="w-[60%] flex justify-around pr-10  "
+                    >
+                      <StepCard {...step} className="text-right" />
+                    </motion.div>
+                    <div className="w-1/2 " />
+                  </>
+                ) : (
+                  <>
+                    <div className="w-1/2" />
+                    <motion.div
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.2 }}
+                      viewport={{ once: false }}
+                      className="w-[60%] flex justify-around pl-10"
+                    >
+                      <StepCard {...step} />
+                    </motion.div>
+                  </>
+                )}
 
+                {/* دایره وسط */}
+                <motion.div
+                  initial={{ scale: 0.5, rotate: -180, backgroundColor: "#ccc" }}
+                  whileInView={{
+                    scale: 1,
+                    rotate: 0,
+                    backgroundColor: "#FAA518",
+                    boxShadow: "0 0 0 6px rgba(250,165,24,0.2)",
+                  }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                            w-12 h-12 rounded-full text-white text-base flex items-center 
+                            justify-center font-extrabold border-4 border-white"
+                >
+                  {index + 1}
+                </motion.div>
+              </div>
+            );
+          })}
         </div>
+      </div>
 
-    </div>
-    
-    </> );
-}
- 
+      {/* موبایل و تبلت */}
+      <div className="xl:hidden flex flex-col items-center mt-12 px-6">
+        <div className="flex flex-col gap-6 w-full max-w-md">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-[#FAA518] text-white p-5 rounded-xl shadow flex gap-4"
+            >
+              <div className="bg-white p-2 rounded-full self-start">{step.icon}</div>
+              <div>
+                <h3 className="font-bold text-base mb-1">{step.title}</h3>
+                <p className="text-sm leading-6">{step.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default SectionSeven;

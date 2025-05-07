@@ -21,12 +21,15 @@ const SectionTwo = () => {
 
     return (
         <div className="w-full flex flex-col justify-center items-center md:container p-5 mt-10">
-            <h2 className="text-[26px] md:text-[32px] font-extrabold text-center mb-3">
+            <h2 className="md:text-3xl  text-2xl font-extrabold text-center mb-3">
                 خدماتی که ما را <span className="text-[#FAA518]">متمایز</span> می‌کند
             </h2>
-            <p className="text-gray-500 text-[14px] md:text-[16px] text-center max-w-xl mb-10">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-            </p>
+            <div className="lg:w-[100%] w-[90%] flex flex-row justify-center items-center">
+                <p className=" text-gray-600 text-sm leading-relaxed text-center max-w-xl mb-10">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+            </div>
+           
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
                 {Service.map((elem, index) => {

@@ -13,9 +13,12 @@ const SectionFoure = () => {
         dispatch(fetchpostSuccessP())
     },[])
     return ( <>
-    <div className=" flex  flex-col justify-center items-center lg:mt-20 mt-20 md:container p-5">
-        <p className="lg:text-[30px] text-[25px] text-center font-bold">پروژه های <span className="text-[#FAA518]">موفق</span> دماوند آیتی </p>
-        <p className='text-[14px] text-center mt-2'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+    <div className=" flex  flex-col justify-center items-center lg:mt-20 mt-15 md:container p-5">
+        <p className="md:text-3xl  text-2xl text-center font-bold">پروژه های <span className="text-[#FAA518]">موفق</span> دماوند آیتی </p>
+        <div className='lg:w-[100%] w-[90%]'>
+        <p className='text-gray-600 text-sm leading-relaxed text-center mt-2'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+            
+        </div>
         <Swiper 
             modules={[
                 Pagination

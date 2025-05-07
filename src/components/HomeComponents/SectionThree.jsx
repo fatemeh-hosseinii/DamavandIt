@@ -60,16 +60,16 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <div className="flex  w-full lg:flex-row flex-col gap-10 justify-between items-center md:container p-5 lg:mt-20 mt-5 ">
+    <div className="flex  w-full lg:flex-row flex-col gap-10 justify-between items-center md:container p-5 lg:mt-20  ">
      
 
       <div className="lg:w-[50%] w-[100%] flex flex-col  items-center justify-center gap-5 mt-15 lg:mt-0 lg:h-[400px]">
-        <p className="text-[30px] font-bold">
+        <p className="md:text-3xl  text-2xl font-bold">
           چرا شرکت <span className="text-[#faa518]">دماوند آیتی</span>؟
         </p>
 
-        <div className="w-full">
-          <p className="text-[#6A7089] text-[15px] leading-[1.75rem] text-center">
+        <div className="lg:w-full w-[94%]">
+          <p className="text-gray-600 lg:text-[16px] text-sm  leading-[1.75rem] text-center">
             شرکت برنامه نویسی رایانیتا، از صفر تا صد پروژه در کنار شماست. تحلیل نیازمندی‌ها، طراحی سیستم، فازبندی، برنامه نویسی، تست و اجرا و پشتیبانی توسط کارشناسان مجرب و متخصص انجام شده و در تمامی مراحل گزارش پیشرفت پروژه به شما ارائه می‌گردد.
           </p>
         </div>

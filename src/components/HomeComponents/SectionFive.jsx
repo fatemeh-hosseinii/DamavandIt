@@ -3,7 +3,7 @@ import question from "../../../public/assets/media/question-mark.png"
 
 const SectionFive = () => {
     return (<>
-    <div className= " lg:mt-20 mt-20 md:container p-5 w-[100%] ">
+    <div className= " lg:mt-20 mt-10 md:container p-5 w-[100%] mb-5 ">
         
         <div className="rounded-lg w-[100%]  p-3 flex md:flex-row flex-col gap-6 lg:gap-0 justify-center  items-center md:justify-between bg-gradient-to-r from-[#1890fa] to-[#0D67BE]">
             <div className="lg:w-[30%] w-[100%] flex flex-row justify-center items-center">

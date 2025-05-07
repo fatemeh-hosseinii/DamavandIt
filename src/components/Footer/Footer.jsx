@@ -2,13 +2,13 @@ import logo from "../../../public/assets/media/icon (2).png";
 
 const Footer = () => {
     return ( <>
-    <div className="lg:flex  flex-col hidden">
-        <div className="bg-[#221E1E] w-[100%] flex flex-row justify-around p-3">
-        <div className=" w-[33%] flex flex-col  p-3 gap-5 ">
+    <div className="flex  flex-col ">
+        <div className="bg-[#221E1E] w-[100%] flex lg:flex-row flex-col justify-center items-center lg:justify-around p-3">
+        <div className=" lg:w-[33%] w-[100%] flex flex-col  p-3 gap-5 ">
                 <p className="text-[25px] font-bold text-[white]">
                     دماوند<span className="text-[#faa518]"> آیتی</span>
                 </p>
-                <div className="w-[75%] ">
+                <div className="lg:w-[75%] w-[100%] ">
                     <p className="text-[12px] text-[white] leading-8">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با 
                     استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
@@ -23,7 +23,7 @@ const Footer = () => {
                     <p className="mt-4 text-[17px] font-bold text-[white] ">Damavand It</p>
                 </div>
         </div>
-        <div className=" w-[33%] p-3 flex flex-col gap-5  ">
+        <div className=" lg:w-[33%] w-[100%] p-3 flex flex-col gap-5  ">
                 <div className="bg-[#3a3838] rounded-lg flex flex-col gap-7 p-3 ">
                     <div className="flex flex-row gap-2">
                         <div className="w-[15px] h-[15px] bg-amber-800 mt-1"></div>
@@ -65,7 +65,7 @@ const Footer = () => {
                     </div>
                 </div>
         </div>
-        <div className=" w-[33%] p-3 flex flex-col gap-5">
+        <div className=" lg:w-[33%] w-[100%] p-3 flex flex-col gap-5">
                 <div className="bg-[#3a3838] rounded-lg p-4 flex flex-col gap-4 justify-center">
                     <p className="text-[14px] font-bold text-white mb-2">شبکه‌های اجتماعی</p>
                     <div className="flex flex-row gap-4">

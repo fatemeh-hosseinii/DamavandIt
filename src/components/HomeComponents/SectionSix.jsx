@@ -1,56 +1,63 @@
-import { useState } from 'react';
+import { useState } from "react";
+
+const faqData = [
+  {
+    question: "چگونه می‌توانم پروژه طراحی سایت ثبت کنم؟",
+    answer:
+      "برای ثبت سفارش طراحی سایت، می‌توانید از طریق فرم تماس با ما اقدام کرده یا مستقیماً با پشتیبانی شرکت تماس بگیرید. کارشناسان ما در کمترین زمان با شما تماس خواهند گرفت.",
+  },
+  {
+    question: "طراحی سایت چقدر زمان می‌برد؟",
+    answer:
+      "مدت زمان طراحی سایت بسته به نوع سایت (شرکتی، فروشگاهی، شخصی و...) متفاوت است، اما معمولاً بین ۱۰ تا ۳۰ روز کاری زمان می‌برد.",
+  },
+  {
+    question: "آیا سایت من با موبایل و تبلت سازگار خواهد بود؟",
+    answer:
+      "بله، تمام سایت‌های طراحی‌شده توسط تیم ما به صورت کامل ریسپانسیو هستند و در انواع دستگاه‌ها (موبایل، تبلت، دسکتاپ) به درستی نمایش داده می‌شوند.",
+  }
+];
 
 const SectionSix = () => {
-  const [open, setOpen] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-  const faqs = [
-    {
-      question: " چگونه ثبت‌نام کنم؟",
-      answer: "برای ثبت‌نام کافی است روی دکمه ثبت‌نام کلیک کنید و فرم مربوطه را پر کنید."
-    },
-    {
-      question: "  هزینه دوره چقدر است؟",
-      answer: "هزینه دوره بسته به نوع برنامه متفاوت است. لطفاً به بخش قیمت‌گذاری مراجعه کنید."
-    },
-    {
-      question: "  آیا امکان بازگشت وجه وجود دارد؟",
-      answer: "بله، در صورت لغو ثبت‌نام در مدت مشخص، بازگشت وجه امکان‌پذیر است."
-    },
-  ];
-
-  const toggleAccordion = (index) => {
-    if (open === index) {
-      setOpen(null); 
-    } else {
-      setOpen(index); 
-    }
+  const toggle = (i) => {
+    setOpenIndex(openIndex === i ? null : i);
   };
 
   return (
-    <>
-      <div className="lg:mt-20 mt-10  flex  flex-col  text-center p-4 w-[100%]">
-        <h2 className="text-[30px] font-bold text-amber-600">سوالات متداول</h2>
-        <div className="mt-4  flex flex-col justify-center items-center w-[100%]">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border-[2px] mt-4 bg-[#f3ac3b] rounded-lg border-amber-500 p-5 w-[90%] ">
+    <div className=" bg-gray-50 md:py-16 py-10 px-6 sm:px-12 lg:px-24">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12 flex flex-col justify-center items-center">
+          <h1 className="md:text-3xl  text-2xl font-bold text-gray-800 mb-4"><span className="text-[#faa518]">سوالات</span> متداول</h1>
+          <div className="lg:w-[100%] w-[90%] ">
+            <p className="text-gray-600 text-sm leading-relaxed">
+              در این بخش می‌توانید پاسخ سوالات پرتکرار درباره خدمات طراحی سایت، پشتیبانی، زمان تحویل، و موارد دیگر را مشاهده کنید.
+            </p>
+          </div>
+        
+        </div>
+
+        <div className="space-y-4">
+          {faqData.map((item, index) => (
+            <div key={index} className="bg-white rounded-xl shadow p-5 transition">
               <button
-                className="w-full flex justify-between items-center text-right focus:outline-none"
-                onClick={() => toggleAccordion(index)}
+                className="flex hover:cursor-pointer justify-between items-center w-full text-right font-medium text-gray-800 md:text-lg text-[13px]"
+                onClick={() => toggle(index)}
               >
-                <span className="text-[white] font-bold lg:text-[16px] text-[13px]">{faq.question}</span>
-                <span className="text-[white] text-2xl">{open === index ? "-" : "+"}</span>
+                <span>{item.question}</span>
+                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
               </button>
-              {open === index && (
-                <div className="mt-2 text-[white] lg:text-[14px] text-[12px] text-right">
-                  {faq.answer}
-                </div>
+              {openIndex === index && (
+                <p className="mt-3 text-gray-600 leading-relaxed text-sm ">{item.answer}</p>
               )}
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default SectionSix;
+
