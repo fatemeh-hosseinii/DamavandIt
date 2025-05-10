@@ -6,9 +6,10 @@ body {
 }
 
 @font-face {
-  font-family: iranyekan;
-  src: url("../public/assets/Fonts/Qs_Iranyekan.ttf") format("truetype");
+  font-family: "iranyekan";
+  src: url("/assets/Fonts/Qs_Iranyekan.ttf") format("truetype");
 }
+
 
 * {
   font-family: iranyekan, sans-serif;
