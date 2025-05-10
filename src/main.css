@@ -3,6 +3,7 @@
 
 body {
   direction: rtl;
+  font-family: "iranyekan", sans-serif;
 }
 
 @font-face {
