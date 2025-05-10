@@ -24,10 +24,10 @@ const ShowBloges = () => {
     }
   
     return (
-    <div className="p-5  flex flex-row gap-3">
-        <div className="w-[75%] flex flex-col  gap-3">
-            <h1 className="text-4xl font-bold">{blog.name}</h1>
-            <div className="w-[40%] mt-4 gap-5 flex flex-row">
+    <div className="p-5  flex lg:flex-row flex-col gap-3">
+        <div className="lg:w-[75%] w-[100%] flex flex-col  gap-3">
+            <h1 className="lg:text-4xl text-2xl font-bold">{blog.name}</h1>
+            <div className="lg:w-[40%] w-[100%] mt-4 gap-5 flex flex-row">
                 <div className="w-[11%] bg-[green] p-2 rounded-lg">
                     <AiOutlineWhatsApp className="text-[white]" size={25}/>
 
@@ -53,7 +53,7 @@ const ShowBloges = () => {
                
             </div>
         </div>
-        <div className="w-[23%] ps-4">
+        <div className="lg:w-[23%] w-[100%] ps-4">
             <h2 className="text-xl font-bold mb-3 border-b pb-2">مطالب مرتبط</h2>
             {blog.sideArticle && blog.sideArticle.map(article => (
                 <div key={article.id} className="mb-4 border-b pb-3">
@@ -68,4 +68,4 @@ const ShowBloges = () => {
     );
 };
   
-  export default ShowBloges;
+export default ShowBloges;

@@ -13,7 +13,7 @@ const SectionFour = () => {
     <div className="flex flex-col gap-5">
         {
             Article.SideArticle?.map((elem)=>{
-                return <div className="shadow-lg flex flex-col gap-5 w-[85%] p-5 rounded-lg">
+                return <div className="shadow-lg flex flex-col gap-5 lg:w-[85%] w-[100%] p-5 rounded-lg ">
                     <img className="rounded-lg" src={elem.image} alt=""/>
                     <div className="flex flex-col gap-4 ">
                         <p className="text-[#58595B] font-bold" >{elem.name}</p>

@@ -41,7 +41,7 @@ const steps = [
 // کارت مرحله
 const StepCard = ({ title, description, icon, className = "" }) => (
   <div
-    className={`text-right bg-[#FFDF80] p-6 rounded-2xl text-white w-full max-w-md shadow-xl ${className}`}
+    className={`text-right bg-[#5f5b5bfd] p-6 rounded-2xl text-white w-full max-w-md shadow-xl ${className}`}
   >
     <div className="flex items-center gap-3 mb-3">
       <div className="bg-white rounded-full p-2 shadow">
@@ -67,7 +67,7 @@ const SectionSeven = () => {
       {/* دسکتاپ */}
       <div className="hidden xl:block relative container mx-auto px-6">
         {/* خط مرکزی */}
-        <div className="absolute top-0 left-1/2 w-[4px] h-full bg-gradient-to-b from-[#00B4DB] via-[#1890fa] to-[#0D67BE] rounded-full z-0" />
+        <div className="absolute top-0 left-1/2 w-[4px] h-full bg-[#515151] rounded-full z-0" />
 
         <div className="relative z-10 flex flex-col gap-5">
           {steps.map((step, index) => {
@@ -132,12 +132,11 @@ const SectionSeven = () => {
         <div className="flex flex-col gap-6 w-full max-w-md">
           {steps.map((step, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-[#FAA518] text-white p-5 rounded-xl shadow flex gap-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: false }}
+              className="bg-[#5f5b5bfd]  text-white p-5 rounded-xl shadow flex gap-4"
             >
               <div className="bg-white p-2 rounded-full self-start">{step.icon}</div>
               <div>

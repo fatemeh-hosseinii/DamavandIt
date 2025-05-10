@@ -5,7 +5,7 @@ import { AiFillFacebook } from "react-icons/ai";
 
 const SectionEight = () => {
     return ( <>
-    <div className="lg:mt-5 mt-20 m w-[100%] p-5 flex lg:flex-row  flex-col justify-center items-end lg:justify-between ">
+    <div className="lg:mt-5 mt-10 m w-[100%] p-5 flex lg:flex-row mb-5  flex-col justify-center items-end lg:justify-between ">
         <div className="lg:w-[60%] w-[100%]  shadow-2xl  rounded-xl flex lg:flex-row flex-col ">
             <div className="bg-gradient-to-r from-[#FAA518] to-[#fa6f18]  lg:rounded-r-xl rounded-t-lg flex  flex-row lg:flex-col justify-around items-center  lg:p-4  lg:w-[15%] w-[100%]  gap-6 ">
              
