@@ -82,7 +82,7 @@ const SectionThree = () => {
                ref={(el) => (counterRefs.current[index] = el)}
               className=" lg:w-[15%] w-[25%] p-2 rounded-lg font-bold flex flex-col  items-center">
                 <p className="lg:text-[20px] text-[18px] text-[#FB7D18]">{counts[index]}+</p>
-                <p className="lg:text-[14px] text-[12px]">{item.title}</p>
+                <p className="lg:text-[14px] text-[11px]">{item.title}</p>
               </div>
             
           ))}

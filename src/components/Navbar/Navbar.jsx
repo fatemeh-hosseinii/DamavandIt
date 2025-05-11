@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import logo from "../../../public/assets/media/LogoDamavand.png";
 import { useEffect, useState } from "react";
 import { fetchpost } from "../../Redux/NavbarSlice";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CiUser } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
@@ -69,19 +69,29 @@ const Navbar = () => {
 
 
             {/* Mobile sidebar menu */}
+
             <div
-                className={`fixed inset-y-0  right-0 w-[50%] bg-[blue] shadow-lg z-50 transform ${
-                    menuOpen ? "translate-x-0" : "translate-x-full"
-                } transition-transform duration-300 ease-in-out`}
+            className={`fixed inset-y-0 right-0 w-[50%] bg-[#ffeab4] shadow-lg z-50 transform ${
+                menuOpen ? "translate-x-0" : "translate-x-full"
+            } transition-transform duration-300 ease-in-out`}
             >
-                <ul className="p-6 space-y-4">
+                <ul className="p-6 flex flex-col gap-3">
                     {Navbar.map((elem) => (
-                        <li key={elem.id} className="flex items-center p-3 gap-3">
-                            <span className="text-gray-700">{elem.name}</span>
-                        </li>
+                    <NavLink
+                        key={elem.id}
+                        to={elem.path || "/"}
+                        className={({ isActive }) =>
+                        `p-2 rounded-lg font-bold text-[15px] ${
+                            isActive ? "text-[#FAA518] bg-white shadow-sm" : "text-[#3e3e3e]"
+                        }`
+                        }
+                    >
+                        {elem.name}
+                    </NavLink>
                     ))}
                 </ul>
             </div>
+
 
             {/* Layer for closing sidebar */}
             {menuOpen && (
