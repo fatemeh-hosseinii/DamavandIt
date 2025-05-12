@@ -20,7 +20,7 @@ const SectionTwo = () => {
     };
 
     return (
-        <div className="w-full flex flex-col justify-center items-center md:container p-5 mt-10">
+        <div className="w-full flex flex-col justify-center items-center md:container p-5 lg:mt-5 mt-14">
             <h2 className="md:text-3xl  text-2xl font-extrabold text-center mb-3">
                 خدماتی که ما را <span className="text-[#FAA518]">متمایز</span> می‌کند
             </h2>

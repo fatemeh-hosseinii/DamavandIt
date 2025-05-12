@@ -31,7 +31,7 @@ const SectionOne = () => {
             </div>
 
             {/* متن برای موبایل */}
-            <div className="lg:hidden flex flex-col justify-center items-center p-3 bg-emerald-800">
+            <div className="lg:hidden flex flex-col justify-center items-center p-3">
                 <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold text-center">
                     <span className="lg:border-b-8 border-b-4 border-amber-300">راحت </span>
                     تر از چیزی که فکرشو کنی!

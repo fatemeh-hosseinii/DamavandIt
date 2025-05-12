@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 const faqData = [
   {
     question: "چگونه می‌توانم پروژه طراحی سایت ثبت کنم؟",
@@ -62,18 +62,35 @@ const FaqPage = () => {
 
         <div className="space-y-4">
           {faqData.map((item, index) => (
-            <div key={index} className="bg-white rounded-xl shadow p-5 transition">
-              <button
-                className="flex hover:cursor-pointer justify-between items-center w-full text-right font-medium text-gray-800 md:text-lg text-[13px]"
-                onClick={() => toggle(index)}
-              >
-                <span>{item.question}</span>
-                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
-              </button>
+          <div
+            key={index}
+            className="rounded-xl shadow p-5 transition bg-[white]"
+            >
+            <button
+              className="flex hover:cursor-pointer justify-between items-center w-full text-right font-medium text-gray-800 md:text-lg text-[13px]"
+              onClick={() => toggle(index)}
+            >
+              <span>{item.question}</span>
+              <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+            </button>
+          
+            <AnimatePresence initial={false}>
               {openIndex === index && (
-                <p className="mt-3 text-gray-600 leading-relaxed text-sm ">{item.answer}</p>
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="mt-3 text-gray-600 leading-relaxed text-sm">
+                    {item.answer}
+                  </p>
+                </motion.div>
               )}
-            </div>
+            </AnimatePresence>
+          </div>
+        
           ))}
         </div>
 
